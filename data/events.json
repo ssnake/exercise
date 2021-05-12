@@ -24,7 +24,7 @@
         "platform": "Airbnb",
         "booking_id": "abcdef128",
         "check_in": "2020-02-27",
-        "check_out": "2020-02-29",
+        "check_out": "2022-02-29",
         "property_id": 2,
         "price_per_night": 160.00,
         "currency": "GBP",
@@ -107,6 +107,27 @@
         "start_date": "2020-03-03",
         "end_date": "2020-03-08",
         "note": "Refurbishment works taking place"
+      }
+    },
+    {
+      "type": "BookingCheckedIn",
+      "created_at": "2020-02-27 18:05:33 +0000",
+      "data": {
+        "booking_id": "abcdef130"
+      }
+    },
+    {
+      "type": "BookingCheckedOut",
+      "created_at": "2020-02-29 16:05:33 +0000",
+      "data": {
+        "booking_id": "abcdef130"
+      }
+    },
+    {
+      "type": "BookingCheckedIn",
+      "created_at": "2020-02-27 16:05:33 +0000",
+      "data": {
+        "booking_id": "abcdef128"
       }
     }
   ]
