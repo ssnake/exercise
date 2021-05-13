@@ -2,8 +2,9 @@
 
 require_relative "event_booking_confirmed"
 
-module EventTypeParser
+module BookingTypeParser
   def self.new type
     return EventBookingConfirmed.new if type == "BookingConfirmed"
+    
   end
 end

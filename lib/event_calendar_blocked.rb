@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class EventBookingConfirmed
+class EventCalendarBlocked
   def parse event:, data:, property_id:, platform:
     return if event["data"]["property_id"] != property_id || event["data"]["platform"] != platform
     id = event["data"]["booking_id"]
