@@ -1,4 +1,5 @@
 require_relative "booking_type_parser"
+require_relative "event_parser"
 
 class Booking
   def initialize events:, property:
@@ -11,7 +12,6 @@ class Booking
   def print
     output = ""
     data = @event_parser.parse events: @events
-    output << "Booked Dates for #{@title}\n"
     data.each do |key, value|
       output << "#{value[:check_in]} - #{value[:check_out]}\n"
     end
