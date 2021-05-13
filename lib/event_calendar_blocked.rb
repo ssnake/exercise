@@ -2,10 +2,11 @@
 
 class EventCalendarBlocked
   def parse event:, data:, property_id:, platform:
-    return if event["data"]["property_id"] != property_id || event["data"]["platform"] != platform
-    id = event["data"]["booking_id"]
-    check_in = event["data"]["check_in"]
-    check_out = event["data"]["check_out"]
-    data[id] = { check_in: check_in, check_out: check_out}
+    id = event["data"]["property_id"]
+    return if id != property_id 
+    start_date = event["data"]["start_date"]
+    end_date = event["data"]["end_date"]
+    note = event["data"]["note"]
+    data[data.keys.count] = { start_date: start_date, end_date: end_date, note: note}
   end
 end
