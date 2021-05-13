@@ -15,6 +15,7 @@ class EventParser
         
       type_parser.parse event: event, data: @events_data, property_id: @id, platform: @platform
     end
+    @events_data
   
   end
 

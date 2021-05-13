@@ -12,7 +12,15 @@ describe "parse events" do
     let(:property) { properties["properties"].first }
 
     it "print check in and check out" do
-      expect(parser.parse(events: events)).to eq("") 
+      expect(parser.parse(events: events)).to eq({"abcdef123"=>{:check_in=>"2020-02-23", :check_out=>"2020-02-27"}, "abcdef130"=>{:check_in=>"2020-02-27", :check_out=>"2020-02-29"}}) 
+    end
+  end
+
+  context "with second property" do
+    let(:property) { properties["properties"].last }
+
+    it "print check in and check out" do
+      expect(parser.parse(events: events)).to eq("abcdef128" => {:check_in=>"2020-02-27", :check_out=>"2020-03-01"}) 
     end
   end
 end
