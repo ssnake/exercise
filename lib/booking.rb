@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Booking
   def initialize events:, property:
     @id  = property["id"]

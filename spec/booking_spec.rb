@@ -9,7 +9,7 @@ describe "print booking stuff" do
 
   context "with first property" do
     let(:property) { properties["properties"].first }
-    it "print check in and check out" do
+    xit "print check in and check out" do
       expect(booking.print).to eq("") 
     end
   end
